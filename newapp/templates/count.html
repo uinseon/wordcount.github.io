@@ -1,0 +1,16 @@
+<h1> 그대가 입력한 텍스트는 <!-- 총 단어수-->{{total}} 단어로 구성되어 있습니다. </h1>
+
+
+<a href="{% url 'comingsoon' %}"> 진짜 단어 개수만 카운팅하고 싶으신가요? </a>
+
+<h1> 입력한 텍스트: </h1>
+<!--입력받은 전체 텍스트-->
+{{fulltext}}
+
+<h1> 단어 카운트: </h1>
+<!--단어: 단어 나온 횟수 -->>
+
+{% for word, countTotal in dictionary %}
+{{word}} : {{countTotal}} <br>
+{% endfor %}
+
